@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font icon -->
+   
+    <script src="https://kit.fontawesome.com/77bf11a666.js"></script>
+    <title>Membuat list vue js</title>
+</head>
+<body>
+
+    <h2 class="text-center">Buat todo list dengan Vue js</h2>
+    
+
+    <div id="app">
+        <p v-if="items.length === 0">Tidak ada kegiatan</p>
+
+        <ul>
+            <li v-for="item in items">{{item}} - <a href="#" v-on:click="deleteData(item)"><i class="fa fa-trash"></i> hapus</a></li>
+        </ul>
+
+
+        <input type="text" v-model="item">
+        <input type="button" value="tambah kegiatan" v-on:click="addItem">
+    </div>
+
+
+    
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
